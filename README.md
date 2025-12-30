@@ -82,8 +82,63 @@ APP_DEBUG=false
 APP_ENV=staging
 APP_DEBUG=false
 ```
+## Virtual Host Setup (Apache)
+
+```bash
+<VirtualHost *:80>
+    ServerName learnapi.local
+    DocumentRoot "/path/to/project/public"
+    <Directory "/path/to/project/public">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+## Add this to your hosts file:
+
+```bash
+127.0.0.1   obs.com
+```
+
+Restart Apache after changes.
+
+## Running the Project
 
 
+```bash
+php artisan serve
+```
+
+Access the app at:
+
+```bash
+http://localhost:8000
+```
+
+## ngrok Setup (HTTPS)
+Start ngrok:
+
+```bash
+ngrok http 8000
+```
+
+You will get an HTTPS URL like:
+
+```bash
+https://abcd1234.ngrok.io
+```
+
+## Twilio IVR Setup
+### 1. Login to Twilio Console
+### 2. Buy or use a Twilio phone number
+### 3. Set Voice Webhook URL to:
+```bash
+https://abcd1234.ngrok.io/webhook
+```
+
+### 4. HTTP Method: POST
+### 5. Make sure webhook route exists in the project
  
 ## About Laravel
 
