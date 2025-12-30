@@ -8,10 +8,11 @@
 </p>
 
 # Project Setup Learnapi
-    ### Required
 
-        PHP
-        Composer
+### Required
+
+    PHP Version 8.1
+    Composer 
         
         
 
