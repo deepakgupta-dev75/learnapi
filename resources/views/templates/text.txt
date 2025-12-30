@@ -1,0 +1,34 @@
+/**
+     * @OA\Post(
+     *     path="/ivr/entry",
+     *     tags={"IVR"},
+     *     security={},
+     *     summary="Handle IVR entry",
+     *     description="Endpoint to handle IVR input from users/calls",
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             type="object",
+     *             required={"Caller", "Digits"},
+     *             @OA\Property(property="Caller", type="string", example="+918887660611", description="Phone number of the caller"),
+     *             @OA\Property(property="Digits", type="string", example="1", description="Digit pressed by the caller")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="IVR input processed successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="IVR input received")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=422,
+     *         description="Validation error",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="errors", type="object", example={"Digits": {"The Digits field is required."}})
+     *         )
+     *     )
+     * )
+     */

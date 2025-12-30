@@ -1,0 +1,56 @@
+POST https://28fb1de9502c.ngrok-free.app/ivr/entry
+Content-Type: application/json
+
+{
+  "Caller": "+918887660611",
+  "Digits": "1"
+}
+
+# POST http://28fb1de9502c.ngrok-free.app/ivr/menu
+# POST https://28fb1de9502c.ngrok-free.app/ivr/menu
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "2"
+# }
+
+# POST https://28fb1de9502c.ngrok-free.app/ivr/sales
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "1"
+# }
+
+# POST https://28fb1de9502c.ngrok-free.app/ivr/support
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "1"
+# }
+
+# POST https://28fb1de9502c.ngrok-free.app/ivr/helpdesk
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "1"
+# }
+
+# POST https://28fb1de9502c.ngrok-free.app/ivr/support-action
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "1"
+# }
+
+# POST https://28fb1de9502c.ngrok-free.app/ivr/agent-connect
+# Content-Type: application/json
+
+# {
+#   "Caller": "+918887660611",
+#   "Digits": "1"
+# }
