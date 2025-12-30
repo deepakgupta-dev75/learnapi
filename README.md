@@ -7,24 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Project Setup Learnapi
 
-### Required
+# LearnAPI Project
 
-    PHP Version 8.1
-    Composer 
-        
-        
+## Requirements
+
+- PHP >= 8.1
+- Composer
+- MySQL
+- ngrok (for HTTPS)
+- Twilio Account (for IVR)
+
+---
+
+## Project Setup
+
+### PHP Version
+Make sure PHP 8.1 is installed:
+
+```bash
+php -v
 
 
-## About Laravel
+## Database Setup
 
-### About Laravel
 
-#### About Laravel
-
-##### About Laravel
-
+ 
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
