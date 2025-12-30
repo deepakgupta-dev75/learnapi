@@ -41,7 +41,47 @@ Install vendor dependencies:
 ```bash
 composer install
 ```
+If vendor files already exist and need update:
 
+```bash
+composer update
+```
+
+## Environment Configuration
+Create environment files in the project root.
+
+### Development Environment
+.env.development
+
+```bash
+APP_ENV=development
+APP_DEBUG=true
+
+DB_HOST=127.0.0.1
+DB_DATABASE=learnapi
+DB_USERNAME=root
+DB_PASSWORD=
+
+TWILIO_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE=your_twilio_number
+```
+
+### Production Environment
+.env.production
+
+```bash
+APP_ENV=production
+APP_DEBUG=false
+```
+
+### Staging Environment
+.env.staging
+
+```bash
+APP_ENV=staging
+APP_DEBUG=false
+```
 
 
  
