@@ -30,6 +30,18 @@ php -v
 ```
 
 ## Database Setup
+Create a database named:
+
+```bash
+CREATE DATABASE learnapi;
+```
+## Composer Setup
+Install vendor dependencies:
+
+```bash
+composer install
+```
+
 
 
  
