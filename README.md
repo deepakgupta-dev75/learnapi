@@ -27,7 +27,7 @@ Make sure PHP 8.1 is installed:
 
 ```bash
 php -v
-
+```
 
 ## Database Setup
 
