@@ -130,15 +130,15 @@ https://abcd1234.ngrok.io
 ```
 
 ## Twilio IVR Setup
-### 1. Login to Twilio Console
-### 2. Buy or use a Twilio phone number
-### 3. Set Voice Webhook URL to:
+- 1. Login to Twilio Console
+- 2. Buy or use a Twilio phone number
+- 3. Set Voice Webhook URL to:
 ```bash
 https://abcd1234.ngrok.io/webhook
 ```
 
-### 4. HTTP Method: POST
-### 5. Make sure webhook route exists in the project
+- 4. HTTP Method: POST
+- 5. Make sure webhook route exists in the project
  
 ## About Laravel
 
