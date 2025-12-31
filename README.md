@@ -43,13 +43,7 @@ Tables
 | git push | Upload changes |
 
 
-
-
-
-
 # LearnAPI
-
-# LearnAPI – Project Setup & Run Guide
 📌 Overview
 
 LearnAPI is a PHP-based API application built on PHP 8.1, using Composer for dependency management and Twilio IVR integration.
