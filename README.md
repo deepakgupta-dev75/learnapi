@@ -51,14 +51,14 @@ CREATE DATABASE learnapi;
 2 Update database credentials in your .env file (see Environment Setup below).
 
 ## ⚙️ Environment Configuration
-The project uses multiple environment files.
-Create environment files in the project root.
+- The project uses multiple environment files.
+- Create environment files in the project root.
 
 ### Environment Files
 Create the following files in the project root:
-.env.development
-.env.staging
-.env.production
+- .env.development
+- .env.staging
+- .env.production
 
 ### Development Environment
 .env.development
