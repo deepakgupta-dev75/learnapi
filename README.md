@@ -30,7 +30,8 @@ md Link
 
 Bold & Italic **Important**  *Optional*
 
-Blockquote  > This project requires PHP 8.1
+Blockquote  
+> This project requires PHP 8.1
 
 Checkboxes
 - [x] API setup
