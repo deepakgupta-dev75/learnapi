@@ -8,47 +8,57 @@
 </p>
 
 
-# LearnAPI Project
+# LearnAPI – Project Setup & Run Guide
+📌 Overview
 
-## Requirements
+LearnAPI is a PHP-based API application built on PHP 8.1, using Composer for dependency management and Twilio IVR integration.
+This document explains how to set up the project locally and on server environments (development, staging, production).
+
+## ✅ System Requirements
+Make sure the following are installed on your system:
 
 - PHP >= 8.1
 - Composer
 - MySQL
 - ngrok (for HTTPS)
 - Twilio Account (for IVR)
-
+- Git
 ---
 
-## Project Setup
+## 📂 Project Setup
 
-### PHP Version
-Make sure PHP 8.1 is installed:
-
-```bash
-php -v
-```
-
-## Database Setup
-Create a database named:
+1️⃣ Clone the Repository
 
 ```bash
-CREATE DATABASE learnapi;
+git clone <repository-url>
+cd learnapi
 ```
-## Composer Setup
-Install vendor dependencies:
 
-```bash
-composer install
-```
-If vendor files already exist and need update:
+2️⃣ Install Dependencies
+Run Composer to install vendor files:
 
 ```bash
 composer update
 ```
+This will generate the vendor/ directory.
 
-## Environment Configuration
+## 🗄️ Database Setup
+1. Create a database named:
+
+```bash
+CREATE DATABASE learnapi;
+```
+2 Update database credentials in your .env file (see Environment Setup below).
+
+## ⚙️ Environment Configuration
+The project uses multiple environment files.
 Create environment files in the project root.
+
+### Environment Files
+Create the following files in the project root:
+.env.development
+.env.staging
+.env.production
 
 ### Development Environment
 .env.development
@@ -82,29 +92,60 @@ APP_DEBUG=false
 APP_ENV=staging
 APP_DEBUG=false
 ```
-## Virtual Host Setup (Apache)
+## 🌐 Virtual Host Setup
 
-```bash
+```bash 
 <VirtualHost *:80>
     ServerName learnapi.local
-    DocumentRoot "/path/to/project/public"
-    <Directory "/path/to/project/public">
+    DocumentRoot /var/www/learnapi/public
+
+    <Directory /var/www/learnapi>
         AllowOverride All
         Require all granted
     </Directory>
 </VirtualHost>
+
 ```
 
 ## Add this to your hosts file:
 
 ```bash
-127.0.0.1   obs.com
+127.0.0.1   learnapi.local
 ```
 
 Restart Apache after changes.
 
-## Running the Project
+## 🔐 HTTPS with ngrok (Required for Twilio)
+Twilio requires a public HTTPS URL.
+Start ngrok:
 
+```bash
+ngrok http 8000
+```
+
+You will get an HTTPS URL like:
+
+```bash
+https://abcd-1234.ngrok-free.app
+```
+Use this URL in:
+- Twilio webhook configuration
+- APP_URL in .env
+
+## ☎️ Twilio IVR Setup
+- 1. Login to Twilio Console
+- 2. Navigate to Phone Numbers → Active Numbers
+- 3. Buy or use a Twilio phone number
+- 4. Set Voice Webhook URL to:
+  
+```bash
+https://abcd1234.ngrok.io/webhook
+```
+
+- 5. HTTP Method: POST
+- 6. Make sure webhook route exists in the project
+
+## ▶️ How to Run the Project
 
 ```bash
 php artisan serve
@@ -116,29 +157,182 @@ Access the app at:
 http://localhost:8000
 ```
 
-## ngrok Setup (HTTPS)
-Start ngrok:
+## 📁 Folder Permissions
+
+## 🧪 Testing
+Run tests (if applicable):
 
 ```bash
-ngrok http 8000
+composer test
 ```
 
-You will get an HTTPS URL like:
+## 🛠️ Troubleshooting
+
+Vendor missing → run composer update
+Twilio webhook not working → check ngrok HTTPS URL
+500 error → check storage/cache permissions
+DB error → verify .env credentials
+
+## 📞 Support
+
+For issues or improvements, please contact the development team or raise a ticket in the repository.
+
+## 🧰 Local Server Requirement (XAMPP)
+
+Before running the project, make sure XAMPP is running.
+### Steps:
+#### Open XAMPP Control Panel
+#### Start the following services:
+    - ✅ Apache
+    - ✅ MySQL
+#### Confirm:
+    - Apache → http://localhost
+    - MySQL → running without errors
+
+#### ❗ The project will not run if Apache or MySQL is stopped.
+
+
+## 🔧 Git Setup & Configuration
+1️⃣ Install Git
+Verify installation:
+```bash
+git --version
+```
+
+2️⃣ Configure Git (First Time Only)
 
 ```bash
-https://abcd1234.ngrok.io
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
 ```
 
-## Twilio IVR Setup
-- 1. Login to Twilio Console
-- 2. Buy or use a Twilio phone number
-- 3. Set Voice Webhook URL to:
+Check config:
 ```bash
-https://abcd1234.ngrok.io/webhook
+git config --list
 ```
 
-- 4. HTTP Method: POST
-- 5. Make sure webhook route exists in the project
+## 📥 Git Clone Repository
+```bash
+git clone <repository-url>
+cd learnapi
+```
+
+## 🔄 Git Pull (Get Latest Code)
+Always pull before starting work:
+```bash
+git pull origin main
+```
+
+## 📤 Git Push (Upload Your Changes)
+
+Step-by-step:
+
+```bash
+git status
+git add .
+git commit -m "Your commit message"
+git push origin your-branch-name
+```
+
+## 🌿 Git Branch Commands
+
+Create new branch:
+```bash
+git checkout -b feature/your-feature-name
+```
+
+Switch branch:
+```bash
+git checkout branch-name
+```
+
+List branches:
+```bash
+git branch
+```
+
+## 📜 Git Log (View History)
+
+Show commit history:
+
+```bash
+git log
+```
+
+Short version:
+```bash
+git log --oneline
+```
+
+Last 5 commits:
+```bash
+git log -5
+```
+
+## ⏪ Git Revert & Reset (IMPORTANT)
+
+🔙 Revert a Commit (Safe – Recommended)
+```bash
+git revert commit_id
+```
+
+Creates a new commit that undoes changes.
+
+⚠️ Reset (Use Carefully)
+
+Reset last commit (keep changes):
+```bash
+git reset --soft HEAD~1
+```
+
+Reset and delete changes:
+```bash
+git reset --hard HEAD~1
+```
+
+
+
+
+### Check or Verify Versions
+Make sure PHP 8.1 is installed:
+
+
+```bash
+php -v
+```
+
+```bash
+composer -v
+```
+
+```bash
+nvm -v
+```
+
+```bash
+npm -v
+```
+
+```bash
+node -v
+```
+
+```bash
+mysql -v
+```
+
+
+## Composer Setup
+Install vendor dependencies:
+
+```bash
+composer install
+```
+If vendor files already exist and need update:
+
+```bash
+composer update
+```
  
 ## About Laravel
 
