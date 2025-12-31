@@ -1,39 +1,3 @@
-## README SETUP 
-
-# Heading
-## Main Section
-### Sub Section
-#### Small heading
-
-- Bullet Points
-1. Numbered list
-
-Code Blocks
-` inline `
-
-```bash
-multi line
-``` 
-Link
-[Swagger UI](http://localhost/swagger)
-
-Bold & Italic 
-**Important**  
-*Optional*
-
-Blockquote  
-> This project requires PHP 8.1
-
-Checkboxes
-- [x] API setup
-- [ ] Docker support
-
-Tables
-| Command | Description |
-|-------|------------|
-| git pull | Get latest code |
-| git push | Upload changes |
-
 <h1 align="center">LearnAPI</h1>
 
 📌 Overview
@@ -421,3 +385,40 @@ If vendor files already exist and need update:
 ```bash
 composer update
 ```
+
+<h1 align="center">README SETUP</h1>
+
+
+# Heading
+## Main Section
+### Sub Section
+#### Small heading
+
+- Bullet Points
+1. Numbered list
+
+Code Blocks
+` inline `
+
+```bash
+multi line
+``` 
+Link
+[Swagger UI](http://localhost/swagger)
+
+Bold & Italic 
+**Important**  
+*Optional*
+
+Blockquote  
+> This project requires PHP 8.1
+
+Checkboxes
+- [x] API setup
+- [ ] Docker support
+
+Tables
+| Command | Description |
+|-------|------------|
+| git pull | Get latest code |
+| git push | Upload changes |
