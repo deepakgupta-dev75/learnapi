@@ -8,24 +8,130 @@
 </p>
 
 
+
+# Heading
+## Main Section
+### Sub Section
+#### Small heading
+
+- Bullet Points
+
+1. Numbered list
+
+Code Blocks
+` inline `
+
+``` multi line
+```
+
+```md Link
+[Swagger UI](http://localhost/swagger)
+
+Bold & Italic **Important**  *Optional*
+
+Blockquote  > This project requires PHP 8.1
+
+Checkboxes
+- [x] API setup
+- [ ] Docker support
+
+Tables
+| Command | Description |
+|-------|------------|
+| git pull | Get latest code |
+| git push | Upload changes |
+
+
+
+
+
+
+# LearnAPI
+
 # LearnAPI – Project Setup & Run Guide
 📌 Overview
 
 LearnAPI is a PHP-based API application built on PHP 8.1, using Composer for dependency management and Twilio IVR integration.
 This document explains how to set up the project locally and on server environments (development, staging, production).
 
-## ✅ System Requirements
-Make sure the following are installed on your system:
+## Table of Contents
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Environment Setup](#environment-setup)
+- [How to Run](#how-to-run)
+- [API Documentation](#api-documentation)
+- [Git Workflow](#git-workflow)
 
-- PHP = 8.1
+## ✅ Requirements
+Make sure the following are installed on your system:
+- PHP 8.1
 - Composer
+- XAMPP
 - MySQL
+- ngrok
+- Twilio Account
+
+
 - Web server (XAMPP – Apache running)
 - Browser (Chrome / Firefox)
 - ngrok (for HTTPS)
 - Twilio Account (for IVR)
 - Git
+
+ 
 ---
+
+## Installation
+1. Clone repository
+2. Install dependencies
+3. Setup environment files
+
+
+## Environment Setup
+- .env.development
+- .env.staging
+- .env.production
+
+## How to Run
+1. Start XAMPP
+2. Start Apache & MySQL
+3. Run composer update
+4. Access project via browser
+
+## Database Setup
+- Database name: learnapi
+
+## Third-Party Services
+- Twilio IVR
+- ngrok HTTPS
+
+## API Documentation
+Swagger is used for API documentation.
+
+## Git Workflow
+- git pull before work
+- feature branches
+- git revert instead of reset
+
+
+## Folder Structure
+app/
+public/
+swagger/
+vendor/
+
+## Troubleshooting
+- Vendor missing → composer update
+- DB error → check .env
+
+
+## Contributing
+Please create feature branches and raise PR.
+
+## License
+MIT License
+
+
 
 ## 📂 Project Setup
 
