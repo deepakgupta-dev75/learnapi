@@ -34,6 +34,7 @@ Tables
 | git pull | Get latest code |
 | git push | Upload changes |
 
+<h1 align="center">LearnAPI</h1>
 
 # LearnAPI
 📌 Overview
