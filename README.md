@@ -15,7 +15,6 @@
 #### Small heading
 
 - Bullet Points
-
 1. Numbered list
 
 Code Blocks
@@ -24,11 +23,12 @@ Code Blocks
 ```bash
 multi line
 ``` 
-
-md Link
+Link
 [Swagger UI](http://localhost/swagger)
 
-Bold & Italic **Important**  *Optional*
+Bold & Italic 
+**Important**  
+*Optional*
 
 Blockquote  
 > This project requires PHP 8.1
