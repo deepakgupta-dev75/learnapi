@@ -68,16 +68,11 @@ Make sure the following are installed on your system:
 - Composer
 - XAMPP
 - MySQL
-- ngrok
-- Twilio Account
-
-
 - Web server (XAMPP – Apache running)
 - Browser (Chrome / Firefox)
 - ngrok (for HTTPS)
 - Twilio Account (for IVR)
 - Git
-
  
 ---
 
