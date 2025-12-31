@@ -17,9 +17,11 @@ This document explains how to set up the project locally and on server environme
 ## ✅ System Requirements
 Make sure the following are installed on your system:
 
-- PHP >= 8.1
+- PHP = 8.1
 - Composer
 - MySQL
+- Web server (XAMPP – Apache running)
+- Browser (Chrome / Firefox)
 - ngrok (for HTTPS)
 - Twilio Account (for IVR)
 - Git
@@ -290,7 +292,7 @@ Reset and delete changes:
 git reset --hard HEAD~1
 ```
 
-
+## 🔧 Swagger Setup
 
 
 ### Check or Verify Versions
