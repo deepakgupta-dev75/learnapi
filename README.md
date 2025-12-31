@@ -21,7 +21,7 @@
 Code Blocks
 ` inline `
 
-``` multi line
+```bash multi line
 ``` 
 
 md Link
