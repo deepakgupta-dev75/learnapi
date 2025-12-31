@@ -24,7 +24,7 @@ Code Blocks
 ``` multi line
 ```
 
-```md Link
+md Link
 [Swagger UI](http://localhost/swagger)
 
 Bold & Italic **Important**  *Optional*
