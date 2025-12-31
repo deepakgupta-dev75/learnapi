@@ -72,6 +72,12 @@ Make sure the following are installed on your system:
  
 ---
 
+--
+
+----
+
+------
+
 ## Installation
 1. Clone repository
 2. Install dependencies
